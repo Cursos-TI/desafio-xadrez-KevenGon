@@ -1,4 +1,4 @@
-// Nivel Novato
+// Nível Novato
 
 #include <stdio.h>
 

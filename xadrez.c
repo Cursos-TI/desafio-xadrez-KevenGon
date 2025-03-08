@@ -1,32 +1,40 @@
+// Nivel Novato
+
 #include <stdio.h>
 
-// Desafio de Xadrez - MateCheck
-// Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
-// O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
+#define TORRE_MOVES 5 // Número de casas que a torre pode se mover
+#define BISPO_MOVES 5 // Número de casas que o bispo pode se mover
+#define RAINHA_MOVES 8 // Número de casas que a rainha pode se mover
+
+void moverTorre(int casas) { // Função que recebe o número de casas que a torre pode se mover
+    printf("Movimento da Torre:\n"); // Imprime a mensagem de movimento da torre
+    for (int i = 0; i < casas; i++) { // Loop que executa o número de casas que a torre pode se mover
+        printf("Direita\n"); // Imprime a mensagem de movimento para a direita
+    }
+}
+
+void moverBispo(int casas) { // Função que recebe o número de casas que o bispo pode se mover
+    printf("Movimento do Bispo:\n"); // Imprime a mensagem de movimento do bispo
+    int i = 0; // Variável de incremento
+    while (i < casas) { // Loop que executa o número de casas que o bispo pode se mover
+        printf("Cima, Direita\n"); // Imprime a mensagem de movimento para cima e para a direita
+        i++; // Incrementa a variável de incremento
+    }
+}
+
+void moverRainha(int casas) { // Função que recebe o número de casas que a rainha pode se mover
+    printf("Movimento da Rainha:\n"); // Imprime a mensagem de movimento da rainha
+    int i = 0; // Variável de incremento
+    do { // Loop que executa o número de casas que a rainha pode se mover
+        printf("Esquerda\n"); // Imprime a mensagem de movimento para a esquerda
+        i++; // Incrementa a variável de incremento
+    } while (i < casas); // Condição do loop
+}
 
 int main() {
-    // Nível Novato - Movimentação das Peças
-    // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
-
-    // Implementação de Movimentação do Bispo
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
-
-    // Implementação de Movimentação da Torre
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.
-
-    // Implementação de Movimentação da Rainha
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
-
-    // Nível Aventureiro - Movimentação do Cavalo
-    // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
-    // Um loop pode representar a movimentação horizontal e outro vertical.
-
-    // Nível Mestre - Funções Recursivas e Loops Aninhados
-    // Sugestão: Substitua as movimentações das peças por funções recursivas.
-    // Exemplo: Crie uma função recursiva para o movimento do Bispo.
-
-    // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
-    // Inclua o uso de continue e break dentro dos loops.
-
+    moverTorre(TORRE_MOVES); // Chama a função moverTorre passando o número de casas que a torre pode se mover
+    moverBispo(BISPO_MOVES); // Chama a função moverBispo passando o número de casas que o bispo pode se mover
+    moverRainha(RAINHA_MOVES); // Chama a função moverRainha passando o número de casas que a rainha pode se mover
     return 0;
+    
 }
